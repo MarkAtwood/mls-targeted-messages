@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-20T01:18:16.471982+00:00",
+  "timestamp": "2026-10-13T05:55:10.995102+00:00",
   "repo": "mlswg/mls-targeted-messages",
   "labels": [
     {
@@ -353,24 +353,26 @@
       "id": "PR_kwDOPFs6J88AAAABAPvuUA",
       "title": "simplify HPKE binding",
       "url": "https://github.com/mlswg/mls-targeted-messages/pull/10",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "raphaelrobert",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Simplifies the binding with HPKE, the old version had some redundancies. This allows us to use the one-shot API for encryption as well.",
       "createdAt": "2026-08-19T07:14:23Z",
-      "updatedAt": "2026-08-19T10:18:13Z",
+      "updatedAt": "2026-10-11T12:38:09Z",
       "baseRepository": "mlswg/mls-targeted-messages",
       "baseRefName": "main",
       "baseRefOid": "5dc32fc3f6cce0c6d2fe05facb75112aec284dc9",
       "headRepository": "mlswg/mls-targeted-messages",
       "headRefName": "simplify-hpke-binding",
       "headRefOid": "ae3ab52c35f57f7e4eec86ddd863c2a5fa83b3db",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-10-11T12:38:08Z",
+      "mergedAt": "2026-10-11T12:38:08Z",
+      "mergedBy": "raphaelrobert",
+      "mergeCommit": {
+        "oid": "ecd8d7e19f3bb67d689488a0f8674db78e48f8be"
+      },
       "comments": [],
       "reviews": [
         {
