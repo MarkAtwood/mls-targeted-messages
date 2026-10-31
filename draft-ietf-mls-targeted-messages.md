@@ -450,19 +450,11 @@ authenticated.
 Targeted messages encrypt directly to the recipient's leaf node HPKE encryption
 key. Unlike application messages in {{!RFC9420}}, which derive per-message keys
 from a secret tree, targeted messages have no per-message key derivation.
-Decrypting a targeted message requires both the recipient's leaf private key
-and the secrets exported from the key schedule of the message's epoch
-({{authentication}} and {{sender-data-encryption}}). An attacker who obtains
-both can decrypt all targeted messages sent to that leaf in that epoch.
-
-Under {{!RFC9420}}, a leaf's HPKE encryption key changes only when the member
-holding that leaf updates it, through an Update proposal or through its own
-Commit with an UpdatePath. Commits by other members advance the epoch without
-changing the recipient's leaf key, so advancing the epoch does not by itself
-rotate that key. Forward secrecy for targeted messages therefore depends both
-on deleting the secrets of past epochs and on the recipient updating its own
-leaf. In applications that require stronger forward secrecy guarantees,
-members SHOULD update their own leaf regularly.
+Compromising the recipient's leaf private key therefore exposes all targeted
+messages encrypted to that key within the epoch. Forward secrecy is at epoch
+granularity only: it depends on the key schedule advancing to a new epoch and on
+the recipient deleting the previous epoch's exporter secret. Applications that
+require stronger forward secrecy guarantees SHOULD advance the epoch frequently.
 Accepting targeted messages from past epochs requires retaining old key
 material and further weakens forward secrecy, as described in
 {{messages-from-past-epochs}}.
