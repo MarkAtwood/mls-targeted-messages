@@ -373,7 +373,7 @@ retain the following key material and state for that epoch:
 - the leaf nodes of the ratchet tree, in order to look up the sender's leaf
   node.
 
-Support for past epochs is OPTIONAL; accepting only the current epoch is the
+Support for past epochs is OPTIONAL. Accepting only the current epoch is the
 most conservative behavior. Retaining key material from past epochs weakens
 the forward secrecy properties described in {{forward-secrecy}}: targeted
 messages for an epoch remain decryptable for as long as that epoch's key
@@ -537,7 +537,7 @@ sender-side operations are not reproducible from the inputs alone; sender
 implementations can be tested by round-tripping against a receiver
 implementation.
 
-All vectors use the mandatory-to-implement (MTI) MLS cipher suite
+All vectors use the mandatory-to-implement MLS cipher suite
 MLS_128_DHKEMX25519_AES128GCM_SHA256_Ed25519. All values except `cipher_suite`,
 `epoch`, the leaf indices, and `padding_length` (all decimal) are hex-encoded.
 
